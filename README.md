@@ -10,6 +10,11 @@
 Allows to set the lifetime for PHP Sessions.
 Needs to uncommented on _ss_environment.php
 
+To use Redis as a Session Store place the following ini_settings to your _config.php
+
+define('SESSIONSAVEHANDLER', 'redis');
+define('SESSIONSAVEPATH', 'tcp://127.0.0.1:6379?prefix=mySessionPrefix');
+
 ### Notice
  * After each Update, set the new Tag
 ```
