@@ -12,7 +12,13 @@ Silverstripe 3.2.x
 ## Introduction
 
 Allows to set the lifetime for PHP Sessions.
-Needs to uncommented on _ss_environment.php
+Needs to be uncommented on _ss_environment.php
+
+The SESSIONSAVEPATH is suggested to be set to the local silverstripe directory, as the session otherwise might be overwritten by other php applications
+
+define('SESSIONID','PHPSESSID');
+define('SESSIONLIFETIME',(60*60*24)); // two hours
+define('SESSIONSAVEPATH','/var/www/__YOUR_SILVERSTRIPE_PATH__/silverstripe-cache/sessions');
 
 To use Redis as a Session Store place the following ini_settings to your _config.php
 
